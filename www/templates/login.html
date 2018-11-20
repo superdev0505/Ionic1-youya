@@ -1,0 +1,36 @@
+<ion-view title="Login" hide-nav-bar="true" id="page2" class="login">
+  <ion-content padding="true" class="manual-ios-statusbar-padding" scroll="false">
+    <div id="login-container14" class="content">
+        <div>
+          <img src="img/EqVd6M2sSum2s1bJJ6dk_logo.svg" style="display: block; width: 50%; height: auto; margin-left: auto; margin-right: auto;">
+        </div>
+        <div class="spacer" style="width: 300px; height: 30px;"></div>
+        <div id="login-container16" class="form_container">
+          <form name="formr" novalidate class="list">
+            <label class="item item-input item-stacked-label" id="login-input1" name="username">
+              <span class="input-label">Email</span>
+              <input type="email" name="email" placeholder="Email" ng-model="form.email" required>
+            </label>
+            <label class="item item-input item-stacked-label" id="login-input2" name="password">
+              <span class="input-label">Password</span>
+              <input type="password" ng-minlength="6" name="password" placeholder="Password" ng-model="form.password" required>
+            </label>
+            <button id="login-button1" style="text-align:right;" class="button button-positive  button-block button-clear">Forget Password?</button>
+          </form>
+         <div style="text-align:center" ng-show="loading">
+          <ion-spinner icon="spiral" class="spinner-light"></ion-spinner>
+          </div>
+        </div>
+
+    </div>
+    <!--div id="login-container15" class="bottom_button_group"-->
+      <!--a ui-sref="register" id="login-button5" class="button button-positive  button-block vertical_button_left">SIGN UP</a>
+      <a ui-sref="toRate" id="login-button4" class="button button-positive  button-block vertical_button_right">LOGIN</a-->
+      <!--a ng-click="login()" id="login-button4" ng-disabled="login-form7.$invalid" class="button button-positive  button-block vertical_button_right">LOGIN</a-->
+    <!--/div-->
+    <div class="bottom_button_group row">
+    <a ui-sref="register" class="col button button-positive button-block vertical_button_left">SIGN UP</a>
+    <a ng-click="login()" class="col button button-positive button-block vertical_button_right " ng-disabled="formr.$invalid">LOGIN</a>
+    </div>
+  </ion-content>
+</ion-view>

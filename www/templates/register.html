@@ -1,0 +1,98 @@
+<ion-view title="Register" hide-nav-bar="true">
+  <form name="formr" novalidate>
+  <ion-content padding="true" class="manual-ios-statusbar-padding">
+
+    <div class="group lang_group">
+      <div class="form_container">
+        <h3>Settings</h3>
+        <h4>Language</h4>
+      </div>
+
+      <div class="flex form_container">
+        <button class="button" ng-class="engClass" ng-click="eng()" >Eng</button>
+        <button class="button" ng-class="chClass" ng-click="china()">中文</button>
+      </div>
+    </div>
+    <div class="group category_group">
+      <div class="form_container">
+        <h3>Category</h3>
+        <h4>Fashion</h4>
+      </div>
+      <div class="flex form_container">
+        <button class="button" ng-class="category_tab_1" ng-click="women()">Women</button>
+        <button class="button" ng-class="category_tab_2" ng-click="men()">Men</button>
+      </div>
+
+      <div class="flex form_container">
+        <button class="button" ng-class="category_tab_3" ng-click="teenboy()">Teen-boy</button>
+        <button class="button" ng-class="category_tab_4" ng-click="teengirl()">Teen-girl</button>
+      </div>
+      <div class="form_container">
+        <button class="button button-block" ng-class="category_tab_5" ng-click="toddlers()">Toddlers</button>
+      </div>
+
+      <!--div class="form_container">
+        <h4>Or</h4>
+        <button class="button button-positive  button-block category_tab_6">Art</button>
+      </div>
+
+      <div class="form_container">
+        <h4 class="inline">Season</h4>
+        <small> (for fashion only)</small>
+      </div>
+      <div class="flex form_container">
+        <button class="button button-positive  tab_button_left">S/S</button>
+        <button class="button button-positive  tab_button_right">F/W</button>
+      </div-->
+      <div class="form_container">
+        <h4>Or</h4>
+        <button class="button button-block" ng-class="category_tab_6" ng-click="art()">Art</button>
+      </div>
+      <!--div class="form_container">
+        <h4 class="inline">Season</h4>
+        <small> (for fashion only)</small>
+      </div>
+      <div class="flex form_container">
+        <button class="button" ng-class="ssClass" ng-click="ss()">S/S</button>
+        <button class="button" ng-class="fwClass" ng-click="fw()">F/W</button>
+      </div-->
+    </div>
+    <div class="group account_group">
+      <div class="form_container">
+          <h3>Account</h3>
+          <label class="item item-input item-stacked-label">
+            <span class="input-label">Username</span>
+            <input type="text" name="username"  placeholder="Username" ng-model="form.username" ng-minlength="6" ng-change="changeName()">
+          </label>
+          <label class="item item-input item-stacked-label">
+            <span class="input-label">Email</span>
+            <input type="email" name="email"  placeholder="Email" ng-model="form.email" ng-change="changeEmail()" required >
+          </label>
+          <label class="item item-input item-stacked-label" name="password">
+            <span class="input-label">Password</span>
+            <input type="password" name="password" placeholder="Password" ng-model="form.password" ng-minlength="6" ng-change="changePasswd()" required>
+          </label>
+          <label class="item item-input item-stacked-label">
+            <span class="input-label">Re-enter password</span>
+            <input type="password" placeholder="Re-enter password" name="confirmpassword" ng-model="form.confirmpassword" ng-change="changeCPasswd()" required compare-to="form.password">
+          </label>
+          <ion-checkbox name="verifyme">Verify me ( optional )</ion-checkbox>
+      </div>
+      <div class="col-center home-col" ng-show="loading">
+        <ion-spinner icon="spiral" class="spinner-light"></ion-spinner>
+      </div>
+    </div>
+  
+  <div class="bottom_button_group row">
+    <a ui-sref="login" class="col button button-positive button-block vertical_button_left">LOGIN</a>
+    <a ng-click="registerUser()" class="col button button-positive button-block vertical_button_right " ng-disabled="formr.$invalid">SIGN UP</a>
+  </div>
+  </ion-content>
+
+    <div class="bar bar-header hint-message" ng-show="errorShow">
+      <button class="hint-close" ng-click="closeHint()"></button>
+      <div class="valid-hint">{{errorMessage}}</div>
+    </div>
+
+  </form>
+</ion-view>

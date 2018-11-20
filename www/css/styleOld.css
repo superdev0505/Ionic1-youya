@@ -1,0 +1,61 @@
+.login{
+  height:100%;
+}
+.valid-hint
+{
+  padding:-1px 0px 5px 30px;
+  font-size:11px;
+}
+.hint-close
+{
+  background: url("../img/close.png") no-repeat;
+  background-size: 100% 80%;
+  border-width:0px;
+  background-color:transparent;
+  position: absolute; right: 1px; bottom:-5px; font-size:26px;
+}
+.hint-message
+{
+  background-color:#cccccc; border-top:1px solid gray;
+}
+.posttabs {
+    background-color: rgba(255, 255, 255, 0);
+    background-image: none !important;
+    border: none !important;
+    bottom:110px;
+    border-color: rgba(255, 255, 255, 0) !important;
+    position: absolute;
+    border-style: none !important;
+    box-shadow: none !important;
+    left:0px;
+}
+.platform-ios .manual-ios-statusbar-padding {
+    padding-top: 0px !important;
+}
+
+.topborder-bold
+{
+    border-top:3px solid black !important;
+}
+.topborder-zero
+{
+    border-top:0px solid black !important;
+}
+
+.rightborder-bold
+{
+    border-right:3px solid black !important;
+    min-width:43px !important;
+    margin-right:10px !important;
+}
+.rightborder-zero
+{
+    border-right:0px solid black !important;
+    min-width:43px !important;
+    margin-right:10px !important;
+
+}
+.album .scroll
+{
+    height:100%;
+}

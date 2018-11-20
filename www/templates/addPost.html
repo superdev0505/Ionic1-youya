@@ -1,0 +1,36 @@
+<ion-view title="Add Post" hide-nav-bar="true">
+  <ion-content padding="false" overflow-scroll=true class="manual-ios-statusbar-padding album">
+    <div class="image_container" style="height:100%">
+      <img style="height:100%" src="{{libraryPhoto.photoURL}}">
+
+      <div class="button-block-group right">
+        <button class="button button-positive  upload_tab_ss" ng-click="ssClick()" ng-class="topBorder" style="z-index:1000"></button>
+        <button class="button button-positive  upload_tab_fw"  ng-click="fwClick()" ng-class="rightBorder" style="z-index:1000"></button>
+      </div>
+
+      <div class="tabs posttabs">
+        <!-- done to complete upload and back to previous page -->
+        <a ui-sref="toRate" class="button button-positive button-block vertical_button_left">DONE</a>
+        <a ng-click="doneAction()" class="button button-positive button-block vertical_button_right">UPLOAD</a>
+      </div>
+
+      
+      <div style="z-index:99; left:0px; position:absolute;bottom:0px; width:100%; height:100px; background:white">
+
+        <ion-scroll direction="x" scrollbar-x="false" overflow-scroll="false" class="available-scroller album_row" has-bouncing="true" style="width:100%; height:100%; background:white">
+          <div class="photo thumb" collection-repeat="photo in assetCollection" item-height="100" item-width="80">
+            <img ng-src="{{photo.thumbnailURL}}" ng-click="setThumbImage(photo)" style="min-height:70px;">
+          </div>
+        </ion-scroll>
+      </div>
+      <div class="upload">
+          <div class="tab_album">
+            <span class="title">ALBUM</span>
+          </div>
+      </div>
+    </div>
+
+
+  </ion-content>
+
+</ion-view>

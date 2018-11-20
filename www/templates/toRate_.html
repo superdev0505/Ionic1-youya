@@ -1,0 +1,100 @@
+<ion-view title="To Rate" hide-nav-bar="true" cache-view="false" class="toRate">
+
+  <ion-content padding="false" class="manual-ios-statusbar-padding" scroll="false">
+
+    <div class="image_container">
+      <ion-scroll zooming="true" direction="xy" delegate-handle="zoom-pane" class="zoom-pane" min-zoom="1" scrollbar-x="false" scrollbar-y="false" overflow-scroll="false">
+        <img ng-src="{{photo.URL}}">
+      </ion-scroll>
+      <!--img src="{{photo.URL}}"-->
+    </div>
+
+
+    <div class="row row-top">
+      <div class="col">
+        <button class="button button-positive  rate_button_icons" ui-sref="icons">ICONS</button>
+        <br>
+        <button class="button button-positive  rate_button_search" ui-sref="search"></button>
+        <ion-list style="position: absolute; top: 130px;">
+          <ion-item>{{photo.name}}</ion-item>
+          <ion-item class="item-icon-left">
+            <i class="icon ion-ios-location-outline"></i>{{photo.address}}</ion-item>
+        </ion-list>
+      </div>
+      <div class="col">
+        <button class="button button-positive  rate_button_ifollow" ui-sref="iFollow">
+          <span>I FOLLOW</span>
+        </button>
+        <br>
+        <button class="button button-positive  rate_button_profile" ng-click="myProfile()">
+          <span>PROFILE</span>
+        </button>
+        <br>
+        <button class="button button-positive  rate_button_addpost" ui-sref="addPost"></button>
+      </div>
+    </div>
+    <div class="tabs row row-bottom">
+      <div class="col">
+        <!--pass to next image-->
+        <button class="tab-item button button-positive  rate_button_pass" ng-click="xpass()"></button>
+        <br>
+        <!--report to notification box-->
+        <button class="tab-item button button-positive  rate_button_report" ng-click="report()">REPORT</button>
+      </div>
+      <!--div class="col col-bottom" on-drag-right="setDragRight()" on-drag-left="setDragLeft()" on-release="setRelease()"-->
+        <div class="col col-bottom">
+        <div class="row" style="height:100%">
+        <div class="col col-bottom ratebar_t0" on-touch="setRate(0)">
+            <div ng-show="rate0" class="ratebar_0"> 
+            </div>
+        </div>
+        <div class="col col-bottom ratebar_t1" on-touch="setRate(1)">
+          <div ng-show="rate1" class="ratebar_1"> 
+            </div>
+        </div>
+        <div class="col col-bottom ratebar_t2" on-touch="setRate(2)">
+          <div ng-show="rate2" class="ratebar_2"> 
+            </div>
+        </div>
+        <div class="col col-bottom ratebar_t3" on-touch="setRate(3)">
+          <div ng-show="rate3" class="ratebar_3"> 
+            </div>
+        </div>        
+        <div class="col col-bottom ratebar_t4" on-touch="setRate(4)">
+          <div ng-show="rate4" class="ratebar_4"> 
+            </div>
+        </div>
+        <div class="col col-bottom ratebar_t5" on-touch="setRate(5)">
+          <div ng-show="rate5" class="ratebar_5">
+            </div>
+        </div>        
+        <div class="col col-bottom ratebar_t6" on-touch="setRate(6)">
+          <div ng-show="rate6" class="ratebar_6"> 
+            </div>
+        </div>
+        <div class="col col-bottom ratebar_t7" on-touch="setRate(7)">
+          <div ng-show="rate7" class="ratebar_7"> 
+            </div>
+        </div>        
+        <div class="col col-bottom ratebar_t8" on-touch="setRate(8)">
+          <div ng-show="rate8" class="ratebar_8"> 
+            </div>
+        </div>
+        <div class="col col-bottom ratebar_t9" on-touch="setRate(9)">
+          <div ng-show="rate9" class="ratebar_9"> 
+            </div>
+        </div>
+        <div class="col col-bottom ratebar_t10" on-touch="setRate(10)">
+            <div ng-show="rate10" class="ratebar_10"> 
+            </div>
+        </div>
+        </div>
+      </div>
+      <!--<ion-item class="range range-positive ratebar">
+        <input type="range" value="10" min="0" max="100" step="1" ng-model="rate">
+        </ion-item>-->
+    </div>
+  </ion-content>
+
+
+</ion-view>

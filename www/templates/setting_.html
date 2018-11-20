@@ -1,0 +1,94 @@
+<ion-view title="Register" hide-nav-bar="true">
+  <form name="formr" novalidate>
+  <ion-content padding="true" class="manual-ios-statusbar-padding">
+
+    <div class="group lang_group">
+      <div class="form_container">
+        <h3>Settings</h3>
+        <h4>Language</h4>
+      </div>
+
+      <div class="flex form_container">
+        <button class="button" ng-class="engClass" ng-click="eng()" >Eng</button>
+        <button class="button" ng-class="chClass" ng-click="china()">中文</button>
+      </div>
+    </div>
+    <div class="group category_group">
+      <div class="form_container">
+        <h3>Default Search Settings</h3>
+        <h4>Fashion</h4>
+      </div>
+      <!--div class="flex form_container">
+        <button class="button button-positive  category_tab_1">Women</button>
+        <button class="button button-positive  category_tab_2">Men</button>
+      </div>
+
+      <div class="flex form_container">
+        <button class="button button-positive  category_tab_3">Kids</button>
+        <button class="button button-positive  category_tab_4">Toddlers</button>
+      </div-->
+      <div class="flex form_container">
+        <button class="button" ng-class="category_tab_1" ng-click="women()">Women</button>
+        <button class="button" ng-class="category_tab_2" ng-click="men()">Men</button>
+      </div>
+
+      <div class="flex form_container">
+        <button class="button" ng-class="category_tab_3" ng-click="teenboy()">Teen-boy</button>
+        <button class="button" ng-class="category_tab_4" ng-click="teengirl()">Teen-girl</button>
+      </div>
+      <div class="form_container">
+        <button class="button button-block" ng-class="category_tab_5" ng-click="toddlers()">Toddlers</button>
+      </div>
+
+      <!--div class="form_container">
+        <h4>Or</h4>
+        <button class="button button-positive  button-block category_tab_6">Art</button>
+      </div>
+
+      <div class="form_container">
+        <h4 class="inline">Season</h4>
+        <small> (for fashion only)</small>
+      </div>
+      <div class="flex form_container">
+        <button class="button button-positive  tab_button_left">S/S</button>
+        <button class="button button-positive  tab_button_right">F/W</button>
+      </div-->
+      <div class="form_container">
+        <h4>Or</h4>
+        <button class="button button-block" ng-class="category_tab_6" ng-click="art()">Art</button>
+      </div>
+      <div class="form_container">
+        <h4 class="inline">Season</h4>
+        <small> (for fashion only)</small>
+      </div>
+      <div class="flex form_container">
+        <button class="button" ng-class="ssClass" ng-click="ss()">S/S</button>
+        <button class="button" ng-class="fwClass" ng-click="fw()">F/W</button>
+      </div>
+
+      <div class="form_container">
+        <form class="list">
+          <label class="item item-input item-stacked-label">
+            <span class="input-label">Location</span>
+            <input type="text" placeholder="Current location" ng-model="form.city" ng-focus="locationFocus()">
+          </label>
+
+        </form>
+      </div>
+
+    </div>
+
+
+  <div class="bottom_button_group row">
+    <a ng-click="back()" class="col button button-positive button-block vertical_button_left">CLOSE</a>
+    <a ng-click="done()" class="col button button-positive button-block vertical_button_right " ng-disabled="formr.$invalid">SAVE</a>
+  </div>
+  </ion-content>
+
+    <div class="bar bar-header hint-message" ng-show="errorShow">
+      <button class="hint-close" ng-click="closeHint()"></button>
+      <div class="valid-hint">{{errorMessage}}</div>
+    </div>
+
+  </form>
+</ion-view>

@@ -1,0 +1,39 @@
+<ion-view title="I Follow" hide-nav-bar="true">
+  <ion-content padding="false">
+    <!--div class="pad-sides masonry" masonry="{transitionDuration: '.9s', hiddenStyle: {opacity: .001, transform: 'scale(0.01)', transform: 'rotate(200deg)'}, visibleStyle: {opacity: 1, transform: 'rotate(200deg)'}}"-->
+    <div ng-if="assetCollection.length == 0"><h5>No Such Result</h5></div>
+    <div masonry='{"isAnimated":false, "gutter":0}' preserve-order>
+    <!--div class="pad-sides masonry" masonry='{"transitionDuration" : "0.4s" ,"itemSelector" : ".brick",
+                    "gutter":12,
+                    "columnWidth":".brick-size",
+                    "isResizeBound":true,
+                    "isAnimated":false,
+                    "isFitWidth": true}'-->
+    <div masonry-tile class="masonry-brick thumb" ng-repeat="photo in assetCollection | filter:myFilter | orderBy:'-rank'">
+        <img src="{{photo.URL}}">
+        <a ng-click="profile(photo)">
+          <div class="after">
+            <div class="bottom_caption flex">
+              <span>
+                <ul>
+                  <li>{{photo.name}}</li>
+                  <li>{{photo.address}}</li>
+                </ul>
+              </span>
+              <span class="right thumb_rate">{{photo.rank.toFixed(0)}}%</span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+
+  </ion-content>
+  <div class="tabs">
+    <a ui-sref="toRate" class="tab-item icon ion-ios-arrow-left"></a>
+    <div class="bottom_bar">
+      <span class="title">I FOLLOW</span>
+    </div>
+    <a ui-sref="icons" class="tab-item icon ion-ios-home-outline"></a>
+  </div>
+
+</ion-view>

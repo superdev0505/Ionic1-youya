@@ -1,0 +1,971 @@
+$positive: #FFFFFF;
+$ionicons-font-path: "../lib/ionic/fonts" !default;
+@import "../www/lib/ionic/scss";
+@import url('https: //fonts.googleapis.com/css?family=Droid+Serif');
+body {
+	font-family: 'Droid Serif', serif;
+}
+
+button, .button, .button: onclick {
+	-webkit-tap-highlight-color: rgba(0,0,0,0) !important;
+	-webkit-tap-highlight-color: transparent !important;
+	/* For some Androids */
+	  background: none;
+	font-size: 14px !important;
+}
+
+*: focus {
+	outline: none;
+}
+
+.splash {
+	display: table !important;
+	width: 100% !important;
+	height: 100% !important;
+}
+
+.button-block-group button {
+	display: block;
+}
+
+.button-block-group .right button {
+	position: relative;
+	float: right;
+}
+
+/*splash and login*/
+.splash, .login {
+	height: 90vh;
+}
+
+.splash .content, .login .content {
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.row, .col {
+	padding: 0;
+}
+
+.button.button-positive {
+	color: #000 !important;
+	font-family: inherit;
+	background-color: rgba(255,255,255,0);
+}
+
+.bottom_button_group {
+	position: fixed;
+	bottom: 0;
+	height: 197px;
+}
+
+.bottom_button_group .button {
+	line-height: 40px;
+}
+
+.vertical_button_right {
+	padding: 0px 50px 0px 0px;
+	text-align: center;
+	margin: 0px;
+	/*width: 160px;
+	*/
+	    height: 40px;
+	z-index: 15;
+	-moz-transform: rotate(-90deg);
+	-ms-transform: rotate(-90deg);
+	-o-transform: rotate(-90deg);
+	-webkit-transform: rotate(-90deg);
+	transform-origin: bottom right;
+	/*position: fixed;
+	right: -4px;
+	*/
+	    background: url("http: //hkwebdesigner.com/YouYa/creator_img/bottom_button_right.png") no-repeat;
+	background-size: contain;
+	background-position: 0;
+}
+
+.album .vertical_button_right {
+	background: url("http: //hkwebdesigner.com/YouYa/creator_img/bottom_button_right.svg") no-repeat;
+	background-size: contain;
+	background-position: 0;
+}
+
+.vertical_button_left {
+	padding: 0px 0px 0px 50px;
+	text-align: center;
+	margin: 0px;
+	height: 40px;
+	/*width: 160px;
+	*/
+	    z-index: 15;
+	-moz-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	-o-transform: rotate(90deg);
+	-webkit-transform: rotate(90deg);
+	transform-origin: bottom left;
+	/*position: fixed;
+	left: -4px;
+	*/
+	    background: url("http: //hkwebdesigner.com/YouYa/creator_img/bottom_button_left.png") no-repeat;
+	background-size: contain;
+	background-position: 100%;
+}
+
+.album .vertical_button_left {
+	background: url("http: //hkwebdesigner.com/YouYa/creator_img/bottom_button_left.svg") no-repeat;
+	background-size: contain;
+	background-position: 100%;
+}
+
+.offset-right {
+	padding-left: 33.33%;
+	float: left;
+}
+
+input {
+	background: url("http: //hkwebdesigner.com/YouYa/creator_img/input_line.png") no-repeat;
+	background-size: contain;
+	background-position: bottom;
+}
+
+/*.login .item-input {
+	padding-left: 0;
+	width: 80%;
+	margin: 0 auto;
+}
+
+*/
+.item-input {
+	padding-left: 0;
+}
+
+.item-stacked-label {
+	border: 0;
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+	padding-left: 15px;
+}
+
+/*Register*/
+.flex {
+	display: flex;
+	clear: both;
+	width: 100%;
+	flex-wrap: wrap;
+	flex-direction: row;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-family: inherit;
+}
+
+h3 {
+	background: url("http: //hkwebdesigner.com/YouYa/creator_img/title_line.png") no-repeat;
+	background-size: contain;
+	background-position: bottom;
+	font-size: 18px;
+	line-height: 30px;
+	text-align: center;
+	font-weight: normal;
+}
+
+h4 {
+	font-size: 16px;
+	font-weight: normal;
+}
+
+.button {
+	min-height: 30px;
+	line-height: 30px;
+}
+
+.button.button-block {
+	margin-top: 0 !important;
+	margin-top: 0 !important;
+}
+
+/*general tab button for language, season*/
+.tab_button_left {
+	background: url("http: //hkwebdesigner.com/YouYa/creator_img/tab_button_left.png") no-repeat;
+	background-size: 100% 100%;
+	background-position: 50%;
+	left: 8px;
+	width: 50%;
+	padding-left: 5px;
+	/*adjust to align center*/}
+.tab_button_left: hover, .tab_button_left.activated, .tab_button_left.active {
+	background: url("http: //hkwebdesigner.com/YouYa/creator_img/tab_button_left_active.png") no-repeat;
+	background-size: 100% 100%;
+	background-position: 50%;
+	left: 8px;
+	width: 50%;
+	padding-left: 5px;
+	/*adjust to align center*/
+	    color: #fff !important;
+}
+
+.tab_button_right {
+	background: url("http: //hkwebdesigner.com/YouYa/creator_img/tab_button_right.png") no-repeat;
+	background-size: 100% 100%;
+	background-position: 50%;
+	right: 8px;
+	width: 50%;
+	padding-right: 5px;
+	/*adjust to align center*/}
+.tab_button_right: hover, .tab_button_right.activated, .tab_button_right.active {
+	background: url("http: //hkwebdesigner.com/YouYa/creator_img/tab_button_right_active.png") no-repeat;
+	background-size: 100% 100%;
+	background-position: 50%;
+	right: 8px;
+	width: 50%;
+	padding-right: 5px;
+	/*adjust to align center*/
+	    color: #fff !important;
+}
+
+/*category fashion tab button*/
+.category_tab_1 {
+	background: url("http: //hkwebdesigner.com/YouYa/creator_img/category_tab_1.png") no-repeat;
+	width: 70%;
+	left: 5px;
+	background-size: 100% 100%;
+	margin-bottom: 5px;
+}
+
+.category_tab_1: hover, .category_tab_1.activated, .category_tab_1.active {
+	background: url("http: //hkwebdesigner.com/YouYa/creator_img/category_tab_1_active.png") no-repeat;
+	width: 70%;
+	left: 7px;
+	background-size: 100% 100%;
+	margin-bottom: 5px;
+	color: #fff !important;
+}
+
+.category_tab_2 {
+	background: url("http: //hkwebdesigner.com/YouYa/creator_img/category_tab_2.png") no-repeat;
+	width: 30%;
+	right: 7px;
+	background-size: 100% 100%;
+	margin-bottom: 5px;
+	padding-right: 5px;
+	/*adjust to align center*/}
+.category_tab_2: hover, .category_tab_2.activated, .category_tab_2.active {
+	background: url("http: //hkwebdesigner.com/YouYa/creator_img/category_tab_2_active.png") no-repeat;
+	width: 30%;
+	right: 8px;
+	background-size: 100% 100%;
+	margin-bottom: 5px;
+	padding-right: 5px;
+	/*adjust to align center*/
+	    color: #fff !important;
+}
+
+/*teen-boy*/
+.category_tab_3 {
+	background: url("http: //hkwebdesigner.com/YouYa/creator_img/category_tab_6.png") no-repeat;
+	width: 50%;
+	background-size: 100% 100%;
+	left: 8px;
+	margin-bottom: 5px;
+}
+
+.category_tab_3: hover, .category_tab_3.activated, .category_tab_3.active {
+	background: url("http: //hkwebdesigner.com/YouYa/creator_img/category_tab_6_active.png") no-repeat;
+	width: 50%;
+	background-size: 100% 100%;
+	left: 8px;
+	margin-bottom: 5px;
+	color: #fff !important;
+}
+
+/*teen-girl*/
+.category_tab_4 {
+	background: url("http: //hkwebdesigner.com/YouYa/creator_img/category_tab_7.png") no-repeat;
+	background-position: 50%;
+	width: 50%;
+	background-size: 100% 100%;
+	right: 10px;
+	margin-bottom: 5px;
+	padding-right: 5px;
+	/*adjust to align center*/}
+.category_tab_4: hover, .category_tab_4.activated, .category_tab_4.active {
+	background: url("http: //hkwebdesigner.com/YouYa/creator_img/category_tab_7_active.png") no-repeat;
+	background-position: 50%;
+	width: 50%;
+	background-size: 100% 100%;
+	right: 10px;
+	margin-bottom: 5px;
+	padding-right: 5px;
+	/*adjust to align center*/
+	    color: #fff !important;
+}
+
+/*teen-girl*/
+.category_tab_5 {
+	background: url("http: //hkwebdesigner.com/YouYa/creator_img/category_tab_8.png") no-repeat;
+	background-position: 50%;
+	background-size: 100% 100%;
+}
+
+.category_tab_5: hover, .category_tab_5.activated, .category_tab_5.active {
+	background: url("http: //hkwebdesigner.com/YouYa/creator_img/category_tab_8_active.png") no-repeat;
+	background-position: 50%;
+	background-size: 100% 100%;
+	color: #fff !important;
+}
+
+/*art tab*/
+.category_tab_6 {
+	background: url("http: //hkwebdesigner.com/YouYa/creator_img/category_tab_5.png") no-repeat;
+	background-position: 50%;
+	background-size: 100% 100%;
+}
+
+.category_tab_6: hover, .category_tab_6.activated, .category_tab_6.active {
+	background: url("http: //hkwebdesigner.com/YouYa/creator_img/category_tab_5_active.png") no-repeat;
+	background-position: 50%;
+	background-size: 100% 100%;
+	color: #fff !important;
+}
+
+/*to narrow the width of content, apply to register, settings, search*/
+.form_container {
+	max-width: 75%;
+	margin: 0 auto;
+}
+
+.item-stacked-label {
+	width: 100%;
+}
+
+.checkbox-icon: before,
+.checkbox input: before {
+	-o-text-overflow: ellipsis;
+	text-overflow: ellipsis;
+	-webkit-transform: rotateZ(-45deg);
+	transform: rotateZ(-45deg);
+	border: 1px solid #000 !important;
+	background: #fff !important;
+	border-radius: 5px !important;
+	font-size: 16px;
+	height: 20px;
+	width: 20px;
+	margin-top: 3px;
+}
+
+.checkbox-icon: after {
+	background: #000;
+	border-radius: 5px;
+	left: 0;
+	top: 0;
+	height: 20px;
+	width: 20px;
+	border: 1px solid #000;
+}
+
+.item-checkbox {
+	border: 0;
+	padding-left: 50px;
+}
+
+.group {
+	margin-bottom: 30px;
+}
+
+/*to separate groups or section*/
+/*to rate*/
+.toRate .content {
+	position: absolute;
+	top: 0;
+	z-index: -1;
+}
+
+.rate_button_icons {
+	background: url("http: //hkwebdesigner.com/YouYa/creator_img/rate_button_icons.png") no-repeat;
+	background-position: 50%;
+	background-size: 100% 100%;
+	height: 46px;
+	width: 99px;
+	padding-left: 5px;
+}
+
+.rate_button_ifollow {
+	background: url("http: //hkwebdesigner.com/YouYa/creator_img/rate_button_ifollow.png") no-repeat;
+	background-position: 100%;
+	background-size: contain;
+	height: 46px;
+	width: 100%;
+}
+
+.rate_button_ifollow span {
+	right: 10px;
+	position: absolute;
+	top: 8px;
+}
+
+.rate_button_search {
+	background: url("http: //hkwebdesigner.com/YouYa/creator_img/rate_button_search.png") no-repeat;
+	background-position: 50%;
+	background-size: 100% 100%;
+	width: 60px;
+	height: 60px;
+}
+
+.rate_button_profile {
+	background: url("http: //hkwebdesigner.com/YouYa/creator_img/rate_button_profile.png") no-repeat;
+	background-position: bottom right;
+	background-size: contain;
+	height: 46px;
+	width: 100%;
+}
+
+.rate_button_profile span {
+	position: absolute;
+	right: 10px;
+	top: 8px;
+}
+
+.rate_button_addpost {
+	background: url(http: //hkwebdesigner.com/YouYa/creator_img/rate_button_addpost.png) no-repeat;
+	background-position: 100%;
+	background-size: contain;
+	width: 100%;
+	height: 80px;
+	min-width: 80px !important;
+}
+
+.rate_button_pass {
+	background: url("http: //hkwebdesigner.com/YouYa/creator_img/rate_button_pass.png") no-repeat;
+	background-position: 50%;
+	background-size: contain;
+	width: 60px;
+	height: 60px;
+}
+
+.rate_button_report {
+	background: url("http: //hkwebdesigner.com/YouYa/creator_img/rate_button_report.png") no-repeat;
+	background-position: 50%;
+	background-size: contain;
+	height: 46px;
+	width: 100px;
+	padding-left: 0px;
+	display: block;
+}
+
+.ratebar_group div {
+	height: 100px;
+	width: 10px;
+	margin-right: 10px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.ratebar_0 {
+	background: url("http: //hkwebdesigner.com/YouYa/creator_img/ratebar_0.png") no-repeat;
+}
+
+.ratebar_1 {
+	background: url("http: //hkwebdesigner.com/YouYa/creator_img/ratebar_1.png") no-repeat;
+}
+
+.ratebar_2 {
+	background: url("http: //hkwebdesigner.com/YouYa/creator_img/ratebar_2.png") no-repeat;
+}
+
+.ratebar_3 {
+	background: url("http: //hkwebdesigner.com/YouYa/creator_img/ratebar_3.png") no-repeat;
+}
+
+.ratebar_4 {
+	background: url("http: //hkwebdesigner.com/YouYa/creator_img/ratebar_4.png") no-repeat;
+}
+
+.ratebar_5 {
+	background: url("http: //hkwebdesigner.com/YouYa/creator_img/ratebar_5.png") no-repeat;
+}
+
+.ratebar_6 {
+	background: url("http: //hkwebdesigner.com/YouYa/creator_img/ratebar_6.png") no-repeat;
+}
+
+.ratebar_7 {
+	background: url("http: //hkwebdesigner.com/YouYa/creator_img/ratebar_7.png") no-repeat;
+}
+
+.ratebar_8 {
+	background: url("http: //hkwebdesigner.com/YouYa/creator_img/ratebar_8.png") no-repeat;
+}
+
+.ratebar_9 {
+	background: url("http: //hkwebdesigner.com/YouYa/creator_img/ratebar_9.png") no-repeat;
+}
+
+.ratebar_10 {
+	background: url("http: //hkwebdesigner.com/YouYa/creator_img/ratebar_10.png") no-repeat;
+}
+
+/*to Rate View*/
+.toRate .list {
+	padding-left: 15px;
+}
+
+.toRate .item {
+	border-color: none;
+	background-color: none;
+	background: none;
+	color: #000;
+	position: relative;
+	z-index: 2;
+	display: block;
+	margin: -1px;
+	padding: 5px;
+	border-width: 0;
+	border-style: none;
+	font-size: 14px;
+}
+
+.toRate .item-icon-left .icon {
+	left: 0;
+	font-size: 16px;
+}
+
+.toRate .item-icon-left {
+	padding-left: 30px !important;
+}
+
+.bottom_rate_button_group {
+	position: fixed;
+	bottom: 0;
+	height: 100px;
+	width: 33%;
+	display: flex;
+}
+
+.right {
+	right: 0;
+	position: absolute;
+}
+
+.align-right {
+	float: right;
+	position: relative;
+}
+
+.width-1-2 {
+	width: 50%;
+	float: left;
+}
+
+.width-1-3 {
+	width: 33.33%;
+	float: left;
+}
+
+.width-2-3 {
+	width: 66.66%;
+	float: left;
+}
+
+.width-1-4 {
+	width: 25%;
+	float: left;
+}
+
+.width-1-5 {
+	width: 20%;
+	float: left;
+}
+
+.width-2-5 {
+	width: 40%;
+	float: left;
+}
+
+.width-3-5 {
+	width: 60%;
+	float: left;
+}
+
+.scroll-content {
+	margin-top: 0px;
+}
+
+.image_container {
+	display: flex;
+	height: 100%;
+	/* Or whatever */
+	    height: 100vh;
+	/* Or whatever */
+	    z-index: -1;
+	position: absolute;
+}
+
+.image_container img {
+	width: 100%;
+	/* Or whatever */
+	    height: 100%;
+	/* Or whatever */
+	    margin: auto;
+	/* Magic! */
+	    min-height: 100vh;
+	margin: auto;
+	max-width: 100%;
+}
+
+.image_thumb_container {
+	/*position: relative;
+	width: 50%;
+	height: auto;
+	float: left;
+	*/
+		column-gap: 2px;
+	width: 100%;
+	max-width: 100%;
+	margin: 0 auto;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+figure {
+	background: #fff;
+	margin: 2px;
+	display: inline-block;
+	-webkit-column-break-inside: avoid;
+	page-break-inside: avoid;
+	break-inside: avoid;
+	flex-grow: 1;
+	width: 48%;
+}
+
+figure figcaption {
+	/*position: relative;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	color: #FFF;
+	*/
+	    position: absolute;
+	/* absolute position (so we can position it where we want)*/  
+	    bottom: 0px;
+	/* position will be on bottom */  
+	    left: 0px;
+	background: url("http: //hkwebdesigner.com/YouYa/creator_img/user_img_overlay.png") no-repeat;
+	background-size: 100%;
+	background-position: bottom;
+	/* styling bellow */  
+	    color: white;
+}
+
+.thumb img {
+	width: 100%;
+	height: auto;
+	border-radius: 25px 0px 25px 0px;
+	-moz-border-radius: 25px 0px 25px 0px;
+	-webkit-border-radius: 25px 0px 25px 0px;
+	vertical-align: middle;
+}
+
+.bottom_caption {
+	position: absolute;
+	bottom: 0;
+	padding: 0;
+	left: 5px;
+	text-align: right;
+}
+
+.bottom_caption ul {
+	font-size: 10px;
+	line-height: 12px;
+	text-align: left;
+}
+
+.thumb_rate {
+	font-size: 30px;
+	margin: 0 10px}
+.thumb .after {
+	bottom: 0;
+	color: white;
+	font-size: 1em;
+	left: 0;
+	overflow: hidden;
+	padding: 3.75em 3em;
+	position: absolute;
+	text-align: center;
+	top: 0;
+	right: 0;
+	background: url("http: //hkwebdesigner.com/YouYa/creator_img/user_img_overlay.png") no-repeat;
+	background-size: 100%;
+	background-position: bottom;
+}
+
+.thumb {
+	position: relative;
+	vertical-align: top;
+	width: 48%;
+	display: inline-block;
+	border-radius: 25px 0px 25px 0px;
+	-moz-border-radius: 25px 0px 25px 0px;
+	-webkit-border-radius: 25px 0px 25px 0px;
+	border: 1px solid #000;
+	margin-bottom: 3px;
+}
+
+.thumb a {
+	display: block;
+}
+
+.bottom {
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	display: block;
+	background: url("http: //hkwebdesigner.com/YouYa/creator_img/bottom_gradient.png") no-repeat;
+	background-size: 100%;
+	background-position: bottom;
+}
+
+.overflow-scroll .tabs {
+	background: url("http: //hkwebdesigner.com/YouYa/creator_img/bottom_gradient.png") no-repeat;
+	background-size: 100%;
+	background-position: bottom;
+}
+
+.tabs {
+	background-color: rgba(255,255,255,0);
+	background-image: none !important;
+	border: none !important;
+	border-color: rgba(255,255,255,0) !important;
+	position: fixed;
+	border-style: none !important;
+	box-shadow: none !important;
+}
+
+.platform-android4 .tabs: after, .platform-android4 .bottom_button_group {
+	content: "";
+	display: block;
+	height: 30px;
+	position: relative;
+	width: 100%;
+}
+
+.bottom_bar {
+	background: url("http: //hkwebdesigner.com/YouYa/creator_img/bottom_title_bg.png") no-repeat;
+	background-size: 100%;
+	background-position: bottom center;
+	width: calc(100% - 50px);
+	margin: 0 auto;
+	text-align: center;
+}
+
+.bottom_bar .title {
+	line-height: 56px;
+	font-size: 18px;
+	height: 46px;
+	vertical-align: middle;
+	position: relative;
+}
+
+.bottom_bar h3 {
+	text-align: center;
+}
+
+.radius input {
+	background: url("http: //hkwebdesigner.com/YouYa/creator_img/location_radius_bg.png") no-repeat;
+	width: 100%;
+	background-position: 50%;
+}
+
+.radius input[type=range] {}
+.rank_table h2 {
+	display: inline;
+	line-height: 20px;
+}
+
+.rank_table small {
+	text-align: center;
+	display: block;
+}
+
+.rank_table div {
+	border-right: 1px solid #000;
+	padding: 0 10px;
+	text-align: center;
+}
+
+.rank_table div: last-child {
+	border: none !important;
+	padding-right: 0 !important;
+}
+
+.top_profile {
+	width: 80%;
+	display: flex;
+	border-bottom: 1px solid #000;
+	background: rgba(255,255,255,0.67);
+}
+
+.top_profile_separator {
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+	width: 5px;
+	overflow: hidden;
+	border-right: 1px solid #000;
+	border-bottom: 1px solid #000;
+	-webkit-border-radius: 10px 0;
+	border-radius: 10px 0;
+	background: rgba(255,255,255,0.67);
+	-webkit-transform: skewX(-41deg);
+	transform: skewX(-41deg);
+	content: "";
+	transform-origin: bottom;
+}
+
+.top_profile h4 {
+	line-height: 0px;
+	text-align: center;
+}
+
+.top_profile small {
+	text-align: center;
+	display: block;
+}
+
+.button_follow {
+	background: url(http: //hkwebdesigner.com/YouYa/creator_img/icon_follow.svg) no-repeat;
+	height: 40px;
+	width: 40px;
+	display: block;
+	background-size: contain;
+	position: absolute;
+	right: 5px;
+	top: 10px;
+}
+
+.verified {
+	background: url(http: //hkwebdesigner.com/YouYa/creator_img/icon_verified.svg) no-repeat;
+	height: 15px;
+	display: inline-block;
+	background-position: left;
+	background-size: contain;
+}
+
+.verified small {
+	padding-left: 18px;
+}
+
+.float-right {
+	float: right;
+}
+
+.ion-ios-home-outline: before {
+	content: url(http: //hkwebdesigner.com/YouYa/creator_img/icon_home.svg);
+	transform: scale(.4);
+	position: fixed;
+	right: 5px;
+	bottom: 0;
+}
+
+.ion-ios-arrow-left: before {
+	content: url(http: //hkwebdesigner.com/YouYa/creator_img/icon_back.svg);
+	transform: scale(.4);
+	position: fixed;
+	left: 10px;
+	bottom: 0;
+}
+
+.button-bar .button {
+	background: none;
+}
+
+.camera_tab_ss {
+	background: url(http: //hkwebdesigner.com/YouYa/creator_img/camera_tab_ss.svg) no-repeat;
+	height: 80px;
+	width: 80px;
+	display: block;
+	background-size: contain;
+	position: fixed;
+	right: 5px;
+	top: 0;
+}
+
+.camera_tab_fw {
+	background: url(http: //hkwebdesigner.com/YouYa/creator_img/camera_tab_fw.svg) no-repeat;
+	height: 80px;
+	display: block;
+	background-size: contain;
+	position: fixed;
+	right: -10px;
+	top: 8px;
+}
+
+.form_container .item {
+	border-style: none;
+}
+
+.tab_album {
+	background: url(http: //hkwebdesigner.com/YouYa/creator_img/tab_album.svg) no-repeat;
+	height: 40px;
+	width: 100%;
+	display: block;
+	background-size: contain;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+}
+
+.tab_album .title {
+	margin-left: 25px;
+	line-height: 40px;
+}
+
+.album .image_container {
+	height: 82vh;
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+	float: left;
+}
+
+.album .bottom_button_group {
+	position: absolute}
+.album .image_container img {
+	max-width: 100%;
+}
+
+.album .thumb {
+	width: 25%;
+	display: inline-block;
+	position: relative;
+	height: 80px;
+	overflow: hidden;
+}
+
+.album .thumb img {
+	height: auto;
+	width: 120%;
+	left: -10%;
+	position: absolute;
+}
+
+.album_row {
+	overflow-x: auto;
+	white-space: nowrap;
+	overflow: hidden;
+	float: left;
+	width: 100%;
+}
+
+.ratebar_background {
+	background: url(http: //hkwebdesigner.com/YouYa/creator_img/ratebar_bg.svg) no-repeat 100% 100%;
+	display: block;
+	width: 200px;
+	height: 200px;
+	background-size: contain;
+}
+

@@ -1,0 +1,71 @@
+<ion-view title="Search" hide-nav-bar="true">
+  <ion-content padding="false" class="manual-ios-statusbar-padding">
+
+    <div class="group category_group">
+      <div class="form_container">
+        <h3>Category</h3>
+        <h4>Fashion</h4>
+      </div>
+      <div class="flex form_container">
+        <button class="button" ng-class="category_tab_1" ng-click="women()">Women</button>
+        <button class="button" ng-class="category_tab_2" ng-click="men()">Men</button>
+      </div>
+
+      <div class="flex form_container">
+        <button class="button" ng-class="category_tab_3" ng-click="teenboy()">Teen-boy</button>
+        <button class="button" ng-class="category_tab_4" ng-click="teengirl()">Teen-girl</button>
+      </div>
+      <div class="form_container">
+        <button class="button button-block" ng-class="category_tab_5" ng-click="toddlers()">Toddlers</button>
+      </div>
+      <div class="form_container">
+        <h4>Or</h4>
+        <button class="button button-block" ng-class="category_tab_6" ng-click="art()">Art</button>
+      </div>
+      <div class="form_container">
+        <h4 class="inline">Season</h4>
+        <small> (for fashion only)</small>
+      </div>
+      <div class="flex form_container">
+        <button class="button" ng-class="ssClass" ng-click="ss()">S/S</button>
+        <button class="button" ng-class="fwClass" ng-click="fw()">F/W</button>
+      </div>
+    </div>
+    <div class="form_container">
+      <h3>Preference</h3>
+      <h4>Order</h4>
+    </div>
+    <div class="flex form_container">
+      <button class="button" ng-class="rdClass" ng-click="random()" >Random</button>
+      <button class="button" ng-class="trClass" ng-click="topRank()">Top Rank</button>
+    </div>
+    <div class="form_container">
+      <form class="list">
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Location</span>
+          <input type="text" placeholder="Current location" ng-model="form.city">
+        </label>
+        <ion-item class="range range-positive radius">
+          <label class="item item-input item-stacked-label">
+            <span class="input-label">Radius : {{form.radius}}km</span>
+            <input type="range" value="50" min="0" max="100" step="1" ng-model="form.radius">
+          </label>
+        </ion-item>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Username Search</span>
+          <input type="text" placeholder="name of user" ng-model="form.search_name">
+        </label>
+        <br>
+        <br>
+        <br>
+
+
+      </form>
+    </div>
+
+  </ion-content>
+  <div class="bottom_button_group row">
+    <a ui-sref="toRate" class="col button button-positive button-block vertical_button_left">CLOSE</a>
+    <a ng-click="goSearchResult()" class="col button button-positive button-block vertical_button_right ">SEARCH</a>
+  </div>
+</ion-view>
